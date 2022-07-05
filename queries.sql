@@ -11,3 +11,5 @@ SELECT * FROM animals WHERE name = 'Agumon' OR name = 'Pikachu';
 SELECT name FROM animals WHERE weight_kg > 10;
 /*Find all animals that are neutered*/
 SELECT name FROM animals WHERE neutered = TRUE;
+/* Find all animals not named Gabumon*/
+SELECT name FROM animals WHERE name NOT IN ('Gabumon');
