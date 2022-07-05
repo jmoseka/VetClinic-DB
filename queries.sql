@@ -7,4 +7,5 @@ SELECT * FROM animals WHERE date_of_birth BETWEEN '2016-01-01' AND '2019-12-31';
 SELECT * FROM animals WHERE neutered = TRUE AND escape_attempts < 3;
 /* List the date of birth of all animals named either "Agumon" or "Pikachu"*/
 SELECT * FROM animals WHERE name = 'Agumon' OR name = 'Pikachu';
-
+/*List name and escape attempts of animals that weigh more than 10.5kg*/
+SELECT name FROM animals WHERE weight_kg > 10;
