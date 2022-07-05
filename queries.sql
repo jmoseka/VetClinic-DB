@@ -9,3 +9,5 @@ SELECT * FROM animals WHERE neutered = TRUE AND escape_attempts < 3;
 SELECT * FROM animals WHERE name = 'Agumon' OR name = 'Pikachu';
 /*List name and escape attempts of animals that weigh more than 10.5kg*/
 SELECT name FROM animals WHERE weight_kg > 10;
+/*Find all animals that are neutered*/
+SELECT name FROM animals WHERE neutered = TRUE;
