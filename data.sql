@@ -46,6 +46,15 @@ SET species = 'pokemon' WHERE species IS NULL;
 COMMIT;
 SELECT * FROM animals;
 
+/*Inside a transaction delete all records in the animals table, 
+then roll back the transaction.*/
+BEGIN;
+DROP TABLE IF EXISTS animals;
+ROLLBACK;
+
+/*Delete all animals born after Jan 1st, 2022.*/
+BEGIN;
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 
 
 
