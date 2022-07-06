@@ -24,6 +24,8 @@ VALUES('Blossom', '1998-10-13', 17, TRUE, 3);
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
 VALUES('Ditto', '2022-04-14', 22, TRUE, 4);
 
+/*Inside a transaction update the animals table by setting the 
+species column to unspecified. Then roll back.*/
 BEGIN;
 UPDATE animals
 SET species = 'unspecified';
@@ -31,7 +33,23 @@ SELECT * FROM animals;
 ROLLBACK;
 SELECT * FROM animals;
 
+/*Inside a transaction:
+  - Update the `animals` table by setting the `species` column to `digimon` for all animals that have a name ending in `mon`.
+  - Update the `animals` table by setting the `species` column to `pokemon` for all animals that don't have `species` already set.
+  - Commit the transaction.s
+  - Verify that change was made and persists after commit.*/
+BEGIN;
+UPDATE animals
+SET species = 'digimon' WHERE name LIKE '%mon';
+UPDATE animals
+SET species = 'pokemon' WHERE species IS NULL;
+COMMIT;
+SELECT * FROM animals;
 
 
 
 
+
+
+
+\! cls;
