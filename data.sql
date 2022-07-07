@@ -99,6 +99,7 @@ UPDATE animals
 SET species_id = 'digimon' WHERE name LIKE '%mon';
 COMMIT;
 
+BEGIN;
 UPDATE animals
 SET species_id = (
 SELECT id
@@ -114,3 +115,49 @@ FROM species
 WHERE name = 'Pokemon'
 )
 WHERE name NOT LIKE '%mon';
+
+COMMIT;
+
+/*
+Modify your inserted animals to include owner information (owner_id):
+Sam Smith owns Agumon.
+Jennifer Orwell owns Gabumon and Pikachu.
+Bob owns Devimon and Plantmon.
+Melody Pond owns Charmander, Squirtle, and Blossom.
+Dean Winchester owns Angemon and Boarmon.
+*/
+
+-- Sam Smith owns Agumon.
+UPDATE animals
+SET owner_id = (
+SELECT id
+FROM owners
+WHERE full_name = 'Sam Smith'
+)
+WHERE name = 'Agumon';
+
+-- Jennifer Orwell owns Gabumon and Pikachu.
+BEGIN;
+UPDATE animals
+SET owner_id = (
+SELECT id
+FROM owners
+WHERE full_name = 'Jennifer Orwell'
+)
+WHERE name = 'Gabumon' OR name = 'Pikachu';
+COMMIT
+
+-- Bob owns Devimon and Plantmon.
+BEGIN;
+UPDATE animals
+SET owner_id = (
+SELECT id
+FROM owners
+WHERE full_name = 'Bob'
+)
+WHERE name = 'Devimon' OR name = 'Plantmon';
+COMMIT
+-- Melody Pond owns Charmander, Squirtle, and Blossom.
+-- Dean Winchester owns Angemon and Boarmon.
+-- Remember these insertions and modifications happen in data.sql.
+
