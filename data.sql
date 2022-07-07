@@ -156,8 +156,21 @@ FROM owners
 WHERE full_name = 'Bob'
 )
 WHERE name = 'Devimon' OR name = 'Plantmon';
+SELECT * FROM animals;
 COMMIT
+
 -- Melody Pond owns Charmander, Squirtle, and Blossom.
+BEGIN;
+UPDATE animals
+SET owner_id = (
+SELECT id
+FROM owners
+WHERE full_name = 'Melody Pond'
+)
+WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
+SELECT * FROM animals;
+COMMIT
 -- Dean Winchester owns Angemon and Boarmon.
+
 -- Remember these insertions and modifications happen in data.sql.
 
