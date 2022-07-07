@@ -13,13 +13,13 @@ weight_kg DECIMAL
 ALTER TABLE animals
 ADD COLUMN species VARCHAR(50);
 
-CREATE TABLE owners(
-    id SERIAL PRIMARY KEY,
-    full_name VARCHAR(100),
-    age INT
+CREATE TABLE owners (
+id SERIAL PRIMARY KEY,
+full_name VARCHAR(100),
+age INT
 );
 
-CREATE TABLE species(
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
+CREATE TABLE species (
+id SERIAL PRIMARY KEY,
+name VARCHAR(100)
 );
