@@ -43,3 +43,18 @@ FROM animals
 WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
 GROUP BY species;
 -- ANSWER : 3.00
+
+/*Write queries (using JOIN) to answer the following questions*/
+-- What animals belong to Melody Pond?
+SELECT name,
+full_name
+FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE full_name = 'Melody Pond';
+
+-- List of all animals that are pokemon (their type is Pokemon).
+SELECT animals.name as animals,
+species.name as species
+FROM animals
+JOIN species ON animals.species_id = species.id
+WHERE species.name = 'Pokemon';

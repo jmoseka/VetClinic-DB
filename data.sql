@@ -183,5 +183,3 @@ WHERE name = 'Angemon' OR name = 'Boarmon';
 SELECT * FROM animals;
 COMMIT;
 
--- Remember these insertions and modifications happen in data.sql.
-
