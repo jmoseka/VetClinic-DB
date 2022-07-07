@@ -64,3 +64,10 @@ SELECT name AS Animals,
 full_name AS Owners
 FROM animals
 RIGHT JOIN owners ON animals.owner_id = owners.id;
+
+-- How many animals are there per species?
+SELECT COUNT(animals.name) AS Animals_count,
+species.name AS Specie
+FROM animals
+JOIN species ON animals.species_id = species.id
+GROUP BY species.name;
