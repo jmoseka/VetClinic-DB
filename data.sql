@@ -170,7 +170,18 @@ WHERE full_name = 'Melody Pond'
 WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
 SELECT * FROM animals;
 COMMIT
+
 -- Dean Winchester owns Angemon and Boarmon.
+BEGIN;
+UPDATE animals
+SET owner_id = (
+SELECT id
+FROM owners
+WHERE full_name = 'Dean Winchester'
+)
+WHERE name = 'Angemon' OR name = 'Boarmon';
+SELECT * FROM animals;
+COMMIT;
 
 -- Remember these insertions and modifications happen in data.sql.
 
