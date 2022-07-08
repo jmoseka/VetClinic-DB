@@ -47,9 +47,9 @@ date_of_graduation DATE
 
 --  Create join table to handle a many-to-many relationship between species and vet
 CREATE TABLE specializations (
-    id SERIAL PRIMARY KEY,
-    species_id INT,
-    vets_id INT
-    CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id),
-    CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
-)
+id SERIAL PRIMARY KEY,
+species_id INT,
+vets_id INT,
+CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id),
+CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
+);
