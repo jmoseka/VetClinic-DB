@@ -37,3 +37,11 @@ ADD CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id);
 ALTER TABLE animals ADD COLUMN IF NOT EXISTS owner_id INT;
 ALTER TABLE animals
 ADD CONSTRAINT fk_owners FOREIGN KEY (owner_id) REFERENCES owners(id);
+
+CREATE TABLE vets (
+id SERIAL PRIMARY KEY,
+name VARCHAR(50),
+age INT,
+date_of_graduation DATE
+);
+
