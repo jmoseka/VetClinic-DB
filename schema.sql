@@ -63,3 +63,14 @@ date_of_visit DATE,
 CONSTRAINT fk_animals FOREIGN KEY (animals_id) REFERENCES animals(id),
 CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
 );
+
+-------------------------------------------------------------
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-------------------------------------------------------------
+CREATE INDEX idx_animals_id ON visits (animals_id);
+--------------------------------------------------------------
+CREATE INDEX owners_email_asc ON owners(email ASC);
+---------------------------------------------------------------
+
+CREATE INDEX visits_animals_id_asc ON visits(animals_id ASC);
