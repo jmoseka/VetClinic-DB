@@ -25,15 +25,15 @@ This repository includes files with plain SQL that can be used to recreate a dat
 👤 **Brian Nyachae**
 
 - GitHub: [@githubBria222](https://github.com/Bria222)
-- Twitter: [@twitterhandle](https://twitter.com/briannyachae9)
-- LinkedIn: [brian-nyachae](https://linkedin.com/in/brian-nyachae)
+- Twitter: [@briannyachae9](https://twitter.com/briannyachae9)
+- LinkedIn: [Brian-Nyachae](https://linkedin.com/in/brian-nyachae)
 
 ## Author 3:
 👤 **Hammed Adisa**
 
-- GitHub: [@githubBria222](https://github.com/aburayhaan)
-- Twitter: [@twitterhandle](https://twitter.com/Ayinla2011)
-- LinkedIn: [brian-nyachae](https://linkedin.com/in/hammed-adisa)
+- GitHub: [@AbuRayhaan](https://github.com/aburayhaan)
+- Twitter: [@ayinla2011](https://twitter.com/Ayinla2011)
+- LinkedIn: [Hammed Adisa](https://linkedin.com/in/hammed-adisa)
 
 
 ## 🤝 Contributing
