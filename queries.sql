@@ -193,3 +193,8 @@ WHERE vets.name = 'Maisy Smith'
 GROUP BY species.name
 ORDER BY count_visit DESC
 LIMIT 1;
+
+-- Use EXPLAIN ANALYZE to check what is happening.
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
+explain analyze SELECT * FROM visits where vets_id = 2;
+explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';

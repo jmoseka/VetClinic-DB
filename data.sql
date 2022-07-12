@@ -343,3 +343,7 @@ VALUES(
 (SELECT id FROM vets WHERE name = 'William Tatcher'),
 '2021-01-11'
 );
+
+---- add more records into owners table
+INSERT INTO owners (full_name, email) SELECT 'Owner ' || generate_series(1,2500000),
+ 'owner_' || generate_series(1,2500000) || '@mail.com';
