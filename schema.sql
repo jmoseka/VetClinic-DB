@@ -65,3 +65,5 @@ CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id)
 );
 
 -------------------------------------------------------------
+
+CREATE INDEX idx_animals_id ON visits (animals_id);
